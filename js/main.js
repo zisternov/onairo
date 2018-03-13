@@ -5,11 +5,11 @@ $(document).ready(function () {
         slidesNavigation: true,
         navigationTooltips: ['HOME', 'ABOUT', 'PROJECTS', 'CONTACT'],
         controlArrows: false,
-        // afterRender: function () {
-        //     setInterval(function () {
-        //         $.fn.fullpage.moveSlideRight();
-        //     }, 10000);
-        // },
+        afterRender: function () {
+            setInterval(function () {
+                $.fn.fullpage.moveSlideRight();
+            }, 10000);
+        },
         onLeave: function (index, nextIndex, direction) {
             if (index == 1) {
                 $('.header').addClass('fixed');
